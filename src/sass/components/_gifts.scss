@@ -1,0 +1,55 @@
+.gifts__cards {
+	display: flex;
+	gap: 12px;
+    margin-top: 18px;
+}
+
+.gift__card {
+	display: flex;
+	flex-direction: column;	
+	background: $content-background;	
+	border-radius: 20px;
+	
+
+	.gift__content {
+        border-radius: 20px;
+        padding: 19px 20px;
+        width: 100%;
+        background: $static-white;
+        align-self: stretch;
+        flex-grow: 1;
+
+        
+	}
+
+	.gift__text {
+		color: $dark;
+		font-family: $font-family;
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 148%;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+        text-align: left;
+		margin-top: 8px;
+	}
+}
+
+.gift__img {
+	
+	border-radius: 20px 20px 0 0;
+
+	img {
+		border-radius: 20px 20px 0 0;
+	}
+}
+
+.gift-for-work {
+	color: $tag-purple;
+}
+.gift-for-health {
+	color: $tag-green;
+}
+.gift-for-harmony {
+	color: $tag-pink;
+}

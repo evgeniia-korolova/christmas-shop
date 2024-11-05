@@ -9,6 +9,7 @@
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
+	
 }
 
 .about__caption {
@@ -18,7 +19,7 @@
 	line-height: 100%;
 	letter-spacing: 0.05em;
 	color: $primary;
-	margin-top: 60px;
+	margin-top: 58px;
 }
 
 .about__img {
@@ -27,8 +28,11 @@
 
 .about__img img {
 	border-radius: 20px;
+	// max-width: 638px;
+	height: auto;
 	border: none;
 	object-fit: cover;
+	display: block;
 	width: 100%;
-	height: 100%;
+	// height: 100%;
 }

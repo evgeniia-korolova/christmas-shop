@@ -1,6 +1,6 @@
 .slider__caption {
 	margin-bottom: 14px;
-	margin-top: -7px;
+	margin-top: -4px;
 }
 
 .slider__window {
@@ -32,4 +32,13 @@
 // }
 .slider__img img{
 	border-radius: 20px;
+}
+
+.slider__controlls {
+	display: flex;
+	width: 100%;
+	padding: 0 82px;
+	gap: 20px;
+	justify-content: flex-end;
+	margin-top: -6px;
 }

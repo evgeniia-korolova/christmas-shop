@@ -22,7 +22,6 @@ h2 {
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: #fff;
-  text-align: center;
 }
 
 h3 {
@@ -33,6 +32,14 @@ h3 {
   letter-spacing: 0.05em;
   text-align: center;
   color: #fff;
+}
+
+h4 {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 p {
@@ -56,18 +63,30 @@ p {
 .container {
   max-width: 1440px;
   margin: 0 auto;
+  background: url(../images/snow.png) center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hero__wrapper {
+  background: url("../images/bg-ball.png") center, url(../images/snow.png);
+  /* height: 488px; */
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 58px 0px 50px 0px;
 }
 
 .about__wrapper {
-  padding: 60px 82px;
+  padding: 60px 82px 60px 82px;
 }
 
 .two-column {
   display: flex;
   border-radius: 20px;
   background: #fff;
-  flex-wrap: wrap;
-  align-items: center;
 }
 
 .slider__wrapper {
@@ -79,7 +98,10 @@ p {
 }
 
 .gifts-wrapper {
-  padding: 60px 82px;
+  padding: 58px 82px 60px 82px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .header {
@@ -142,17 +164,6 @@ p {
   background: rgba(255, 70, 70, 0.1);
 }
 
-.hero__wrapper {
-  background: url("../images/bg-ball.png") center, url(../images/snow.png);
-  /* height: 488px; */
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 60px 0px;
-}
-
 .hero__content {
   padding: 60px 0;
   max-width: 426px;
@@ -208,7 +219,7 @@ p {
   line-height: 100%;
   letter-spacing: 0.05em;
   color: #ff4646;
-  margin-top: 60px;
+  margin-top: 58px;
 }
 
 .about__img {
@@ -217,16 +228,17 @@ p {
 
 .about__img img {
   border-radius: 20px;
+  height: auto;
   border: none;
   -o-object-fit: cover;
      object-fit: cover;
+  display: block;
   width: 100%;
-  height: 100%;
 }
 
 .slider__caption {
   margin-bottom: 14px;
-  margin-top: -7px;
+  margin-top: -4px;
 }
 
 .slider__window {
@@ -254,4 +266,64 @@ p {
 
 .slider__img img {
   border-radius: 20px;
+}
+
+.slider__controlls {
+  display: flex;
+  width: 100%;
+  padding: 0 82px;
+  gap: 20px;
+  justify-content: flex-end;
+  margin-top: -6px;
+}
+
+.gifts__cards {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.gift__card {
+  display: flex;
+  flex-direction: column;
+  background: #ecf3f8;
+  border-radius: 20px;
+}
+.gift__card .gift__content {
+  border-radius: 20px;
+  padding: 19px 20px;
+  width: 100%;
+  background: #fff;
+  align-self: stretch;
+  flex-grow: 1;
+}
+.gift__card .gift__text {
+  color: #181c29;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 148%;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: left;
+  margin-top: 8px;
+}
+
+.gift__img {
+  border-radius: 20px 20px 0 0;
+}
+.gift__img img {
+  border-radius: 20px 20px 0 0;
+}
+
+.gift-for-work {
+  color: #4361ff;
+}
+
+.gift-for-health {
+  color: #06a44f;
+}
+
+.gift-for-harmony {
+  color: #ff43f7;
 }/*# sourceMappingURL=style.css.map */
