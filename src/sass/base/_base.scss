@@ -1,0 +1,54 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: $primary;
+	font-family: $font-family;
+	height: 100%;
+	margin: 0 auto;
+}
+
+a {
+	text-decoration: none;
+}
+
+h2 {
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 152%;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+	color: $static-white;
+	text-align: center;
+}
+
+h3 {
+	font-family: $second-family;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 100%;
+	letter-spacing: 0.05em;
+	text-align: center;
+	color: $static-white;
+}
+
+p {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 148%;
+	color: $dark;
+}
+
+.caption {
+	font-family: $second-family;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 100%;
+	letter-spacing: 0.05em;
+	text-align: center;
+	color: $static-white;
+	margin-bottom: 12px;
+}

@@ -1,0 +1,29 @@
+.container {
+    max-width: $desktop-width;
+    margin: 0 auto;
+}
+
+
+.about__wrapper {
+    padding: 60px 82px;
+}
+
+.two-column {
+    display: flex;    
+    border-radius: 20px;
+    background: $static-white;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.slider__wrapper {
+    padding: 60px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.gifts-wrapper {
+    padding: 60px 82px;
+}

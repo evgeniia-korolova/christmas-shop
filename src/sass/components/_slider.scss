@@ -1,0 +1,35 @@
+.slider__caption {
+	margin-bottom: 14px;
+	margin-top: -7px;
+}
+
+.slider__window {
+	overflow-x: hidden;
+	width: 100%;
+}
+
+.slider__line {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.slider__text {
+	font-weight: 600;
+	font-size: 80px;
+	text-transform: uppercase;
+	text-align: center;
+	color: #fff;
+	
+}
+
+.slider__text:first-child {
+	margin-left: 82px;
+}
+
+// .slider__img {
+// 	border-radius: 20px;
+// }
+.slider__img img{
+	border-radius: 20px;
+}
