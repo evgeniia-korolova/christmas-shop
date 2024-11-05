@@ -44,3 +44,10 @@
     flex-direction: column;
     align-items: center;
 }
+
+.cta__wrapper {
+    background: url('../images/bg-forest.png') center, url(../images/snow.png) center;
+    background-size: cover;
+	background-repeat: no-repeat;
+     padding: 90px 82px 60px 82px;
+}
