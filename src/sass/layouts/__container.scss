@@ -49,5 +49,10 @@
     background: url('../images/bg-forest.png') center, url(../images/snow.png) center;
     background-size: cover;
 	background-repeat: no-repeat;
-     padding: 90px 82px 60px 82px;
+     padding: 90px 82px 58px 82px;
+}
+
+.footer__container {
+    padding: 62px 82px;
+    background: $static-white;
 }

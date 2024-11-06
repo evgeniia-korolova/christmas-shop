@@ -108,7 +108,12 @@ p {
   background: url("../images/bg-forest.png") center, url(../images/snow.png) center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 90px 82px 60px 82px;
+  padding: 90px 82px 58px 82px;
+}
+
+.footer__container {
+  padding: 62px 82px;
+  background: #fff;
 }
 
 .header {
@@ -358,7 +363,70 @@ p {
   transform: translateY(-50%);
   right: 0;
   width: 1px;
-  height: 30px;
+  height: 20px;
+}
+
+.contact__cards {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 60px;
+}
+.contact__cards .contact__card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  flex-basis: 33%;
+  background: #ecf3f8;
+  border-radius: 20px;
+  padding: 20px 0;
+}
+.contact__cards .contact__card a,
+.contact__cards .contact__card h3 {
+  color: #181c29;
+}
+.contact__cards .contact__card a {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 152%;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.contact__cards .contact__card h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 152%;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.contact__cards .contact__card img {
+  width: 80px;
+  height: 80px;
+}
+
+.socials {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  gap: 10px;
+}
+.socials__icons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+.socials__icons a {
+  padding: 8px;
+}
+.socials .copy-rights {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 148%;
+  text-align: center;
+}
+.socials .caption {
+  color: #181c29;
 }
 
 .dark__button {
