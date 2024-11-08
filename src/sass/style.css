@@ -77,8 +77,13 @@ p {
   color: #fff;
 }
 
-.container {
+.wrapper {
   max-width: 1440px;
+  margin: 0 auto;
+}
+
+.container {
+  width: 100%;
   margin: 0 auto;
   background: url(../images/snow.png) center, #ff4646;
   background-size: cover;
@@ -114,7 +119,6 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
 }
 
 .cta__wrapper {

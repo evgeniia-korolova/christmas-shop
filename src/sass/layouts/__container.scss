@@ -1,5 +1,10 @@
-.container {
+.wrapper {
 	max-width: $desktop-width;
+	margin: 0 auto;
+}
+
+.container {
+	width: 100%;;
 	margin: 0 auto;
 	background: url(../images/snow.png) center, $primary;
 	background-size: cover;
@@ -18,8 +23,7 @@
 }
 
 .about__wrapper {
-	padding: 60px 82px;	
-	
+	padding: 60px 82px;		
     display: flex;    
 }
 
@@ -34,7 +38,6 @@
 	padding: 60px 82px;
 	@include flex(column);	
 	align-items: center;
-	width: 100%;
 }
 
 .cta__wrapper {
