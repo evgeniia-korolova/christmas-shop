@@ -15,7 +15,7 @@
 	cursor: pointer;
 	border: 1px dashed transparent;
 	border-radius: 4px;
-	transition: 0.3s;
+	@extend %transition;
 }
 
 .logo:hover {
@@ -33,31 +33,3 @@
 	color: var(--dark);
 }
 
-.nav__list {
-	list-style: none;
-	display: flex;
-	gap: 6px;
-}
-
-.nav__item {
-	a {
-		display: flex;
-		font-family: $font-family;
-		font-weight: 600;
-		font-size: 12px;
-		line-height: 130%;
-		letter-spacing: 0.05em;
-		text-transform: uppercase;
-		color: $dark;
-		padding: 12px 20px;
-		border: 1px solid rgba(255, 255, 255, 0.1);
-		transition: 0.3s;
-	}
-
-	a:hover {
-		color: $primary;
-		border: 1px solid rgba(255, 255, 255, 0.1);
-		border-radius: 24px;
-		background: rgba(255, 70, 70, 0.1);
-	}
-}

@@ -1,42 +1,35 @@
 .gifts__cards {
-	display: flex;
+	@include flex(row);
+	flex-wrap: wrap;
 	gap: 12px;
-    margin-top: 18px;
+	margin-top: 1.8rem;
+	justify-content: center;
 }
 
 .gift__card {
-	display: flex;
-	flex-direction: column;	
-	background: $content-background;	
-	border-radius: 20px;
-	
+	@include flex(column);
+	background: $content-background;
+	border-radius: 2rem;
+	flex-basis: calc((100% - 36px) / 4);
 
 	.gift__content {
-        border-radius: 20px;
-        padding: 19px 20px;
-        width: 100%;
-        background: $static-white;
-        align-self: stretch;
-        flex-grow: 1;
-
-        
+		border-radius: 2rem;
+		padding: 19px 20px;
+		width: 100%;
+		background: $static-white;
+		flex-grow: 1;
 	}
 
 	.gift__text {
+		@include font(1.6rem, 1.48, 0.08em, 600, normal);
 		color: $dark;
-		font-family: $font-family;
-		font-weight: 600;
-		font-size: 16px;
-		line-height: 148%;
-		letter-spacing: 0.08em;
 		text-transform: uppercase;
-        text-align: left;
+		text-align: left;
 		margin-top: 8px;
 	}
 }
 
 .gift__img {
-	
 	border-radius: 20px 20px 0 0;
 
 	img {
@@ -52,4 +45,8 @@
 }
 .gift-for-harmony {
 	color: $tag-pink;
+}
+
+.caption-gifts {
+	margin-bottom: 12px;
 }

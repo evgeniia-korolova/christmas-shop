@@ -1,32 +1,28 @@
 .cta__content {
 	max-width: 426px;
-	display: flex;
-	flex-direction: column;
-    gap: 9px;
+	@include flex(column);	
+    gap: 20px;
 	align-items: center;
-	padding: 90px 0 118px 0;
+	justify-content: center;
+	padding: 120px 0;
 	margin: 0 auto;
 
 	h2 {
 		text-align: center;
 	}
 
-    .caption {
-        margin-bottom: 8px;
-    }
-
-  
+    
 	.timer {
-		padding: 8px 12px;
+		margin-top: 10px;
 		display: flex;        
 		border-radius: 20px;
-		padding: 8px 12px 12px 12px;
+		padding: 7px 12px 12px 12px;
         background: $static-white-40;
+				
 
 		.timer__item {
 			width: 80px;
-            display: flex;
-            flex-direction: column;
+            @include flex(column);	
             align-items: center;
             position: relative;
 			h4 {
@@ -46,3 +42,5 @@
         }
 	}
 }
+
+

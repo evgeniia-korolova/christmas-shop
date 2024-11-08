@@ -1,6 +1,5 @@
-.slider__caption {
-	margin-bottom: 14px;
-	margin-top: -4px;
+.caption-slider {
+	margin-bottom: 12px;
 }
 
 .slider__window {
@@ -15,22 +14,17 @@
 }
 
 .slider__text {
-	font-weight: 600;
-	font-size: 80px;
+	@include font(8rem, 1.219, 0em, 600, normal);
 	text-transform: uppercase;
 	text-align: center;
-	color: #fff;
-	
+	color: $static-white;
 }
 
 .slider__text:first-child {
-	margin-left: 82px;
+	margin-left: 84px;
 }
 
-// .slider__img {
-// 	border-radius: 20px;
-// }
-.slider__img img{
+.slider__image {
 	border-radius: 20px;
 }
 
@@ -40,5 +34,4 @@
 	padding: 0 82px;
 	gap: 20px;
 	justify-content: flex-end;
-	margin-top: -6px;
 }

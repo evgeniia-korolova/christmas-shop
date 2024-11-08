@@ -1,17 +1,18 @@
-.dark__button {
-	border-radius: 20px;
-	padding: 20px 32px;
-	width: 236px;
-	font-family: var(--font-family);
-	font-weight: 600;
-	font-size: 12px;
-	line-height: 130%;
-	letter-spacing: 0.05em;
+.dark__button {	
+	@include font(1.2rem, 1.3, 0.05em, 600, normal);
 	text-transform: uppercase;
-	text-align: center;
-	color: $static-white;
-	display: flex;
+	border-radius: 20px;
+	padding: 20px 32px;	
+	color: $static-white;	
 	background: $dark;
 	padding: 20px 32px;
-	margin: 12px auto;
+	margin: 0 auto;
+	cursor: pointer;
+	@extend %transition;
+
+	&:hover {
+		background: $static-white;
+		color: $dark;
+	}
 }
+

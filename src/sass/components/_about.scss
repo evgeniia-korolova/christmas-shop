@@ -1,3 +1,9 @@
+.about__bg {
+	background: $static-white;
+	display: flex;
+	border-radius: 20px;
+}
+
 .about__title {
 	color: $dark;
 }
@@ -6,20 +12,14 @@
 	border-radius: 20px;
 	flex-basis: 50%;
 	padding: 100px 152px 100px 60px;
-	display: flex;
-	flex-direction: column;
-	gap: 20px;
-	
+	@include flex(column);	
+	gap: 20px;	
 }
 
-.about__caption {
-	font-family: $second-family;
-	font-weight: 400;
-	font-size: 24px;
-	line-height: 100%;
-	letter-spacing: 0.05em;
+.caption-about { 
 	color: $primary;
 	margin-top: 58px;
+	text-align: left;	
 }
 
 .about__img {
@@ -27,12 +27,10 @@
 }
 
 .about__img img {
-	border-radius: 20px;
-	// max-width: 638px;
+	border-radius: 20px;	
 	height: auto;
 	border: none;
 	object-fit: cover;
 	display: block;
-	width: 100%;
-	// height: 100%;
+	width: 100%;	
 }

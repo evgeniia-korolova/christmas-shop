@@ -4,11 +4,10 @@
 	margin-bottom: 60px;
 
 	.contact__card {
-		display: flex;
-		flex-direction: column;
-		gap: 12px;
-		align-items: center;
-		flex-basis: 33%;
+		@include flex(column);	
+		gap: 11px;
+		align-items: center;		
+		flex-basis: calc((100% - 24px) / 3);
 		background: $content-background;
 		border-radius: 20px;
 		padding: 20px 0;
@@ -19,56 +18,39 @@
 		}
 
 		a {
-			font-weight: 600;
-			font-size: 24px;
-			line-height: 152%;
-			letter-spacing: 0.16em;
+			@include font(2.4rem, 1.52, 0.16em, 600);						
 			text-transform: uppercase;
 		}
 
-		h3 {
-			font-family: $font-family;
-			font-weight: 600;
-			font-size: 16px;
-			line-height: 152%;
-			letter-spacing: 0.08em;
-			text-transform: uppercase;
-		}
 
 		img {
 			width: 80px;
 			height: 80px;
+			object-fit: contain;
 		}
 	}
 }
 
 .socials {
-	display: flex;
-	flex-direction: column;
+	@include flex(column);	
 	align-self: center;
-    gap: 10px;
-
+    gap: 12px;
 	
 	&__icons {
 		display: flex;
 		justify-content: center;
         gap: 12px;
 
-
 		a {
-			padding: 8px;
+			padding: 8px;			
 		}
 	}
-    .copy-rights {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 148%;
-        text-align: center;
-        
+    .copy-rights {       
+        text-align: center;        
     }
 
     .caption {
-        color: $dark;
+        color: $dark;		
     }
 }
 

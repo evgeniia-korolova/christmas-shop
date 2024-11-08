@@ -1,0 +1,40 @@
+.icon {
+	width: 40px;
+	height: 40px;
+}
+
+.icon-telegram {
+	background: url('../images/telegram.svg') no-repeat center;
+}
+.icon-facebook {
+	background: url('../images/facebook.svg') no-repeat center;
+}
+.icon-instagram {
+	background: url('../images/instagram.svg') no-repeat center;
+}
+.icon-x {
+	background: url('../images/x.svg') no-repeat center;
+}
+
+.arrow {
+	width: 56px;
+	height: 56px;
+	@extend %transition;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	background: transparent;
+	border: none;
+	stroke: $static-white;
+	fill: $primary;		
+
+	&:hover {
+		stroke: $primary;
+		fill: $static-white;
+	}
+}
+
+.arrow-left {
+	transform: rotate(180deg);
+}
