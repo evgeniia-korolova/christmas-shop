@@ -1,5 +1,5 @@
 .gifts__cards {
-	@include flex(row);
+	display: flex;
 	flex-wrap: wrap;
 	gap: 12px;
 	margin-top: 1.8rem;
@@ -14,8 +14,7 @@
 
 	.gift__content {
 		border-radius: 2rem;
-		padding: 19px 20px;
-		width: 100%;
+		padding: 19px 20px;		
 		background: $static-white;
 		flex-grow: 1;
 	}

@@ -273,7 +273,6 @@ p {
 
 .gifts__cards {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 1.8rem;
@@ -290,7 +289,6 @@ p {
 .gift__card .gift__content {
   border-radius: 2rem;
   padding: 19px 20px;
-  width: 100%;
   background: #fff;
   flex-grow: 1;
 }
