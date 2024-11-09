@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" dispaly="none">
   
   
-    <symbol id="arrow" width="24" height="24" viewBox="0 0 24 24">
-    <g>
-    <path fill="none" d="M6 12h12.5m0 0-6-6m6 6-6 6"  stroke-linecap="round" stroke-linejoin="round"/>
-    </g>
+    <symbol id="arrow" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    
+    <path  d="M6 12h12.5m0 0-6-6m6 6-6 6"  stroke-linecap="round" stroke-linejoin="round"/>
+    
     </symbol> 
 
   
