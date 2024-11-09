@@ -6,9 +6,17 @@
 
     <symbol id="arrow-right" viewBox="0 0 32 32">
     <use xlink:href="#reuse-0" stroke-width=".533"/>
-      <path fill="currentColor" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="0.5714" d="M11.429 0.286h9.143c6.154 0 11.143 4.989 11.143 11.143v9.143c0 6.154-4.989 11.143-11.143 11.143h-9.143c-6.154 0-11.143-4.989-11.143-11.143v-9.143c0-6.154 4.989-11.143 11.143-11.143z"></path>
-      <path  stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="0.5714" d="M12.571 16h7.143M19.714 16l-3.429-3.429M19.714 16l-3.429 3.429"></path>
+      
+      <path d="M6 12H18.5M18.5 12L12.5 6M18.5 12L12.5 18" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
   </symbol>
+    
+    
    
+   
+    
+    
+   
+    
+
   </defs>
 </svg>

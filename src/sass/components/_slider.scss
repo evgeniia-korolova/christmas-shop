@@ -34,4 +34,8 @@
 	padding: 0 82px;
 	gap: 20px;
 	justify-content: flex-end;
+
+	@include media-laptop {
+		padding: 0 8px;	
+	}
 }

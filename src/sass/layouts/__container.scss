@@ -1,12 +1,20 @@
-
-
 .wrapper {
 	max-width: $desktop-width;
 	margin: 0 auto;
+	
+	@include media-laptop {
+		max-width: $laptop-width;
+	}
+	@include media-tablet {
+		max-width: $tablet-width;
+	}
+	@include media-mobile {
+		max-width: $mobile-width;
+	}
 }
 
 .container {
-	width: 100%;;
+	width: 100%;	
 	margin: 0 auto;
 	background: url(../images/snow.png) center, $primary;
 	background-size: cover;
@@ -26,7 +34,15 @@
 
 .about__wrapper {
 	padding: 60px 82px;		
-    display: flex;    
+    display: flex; 
+	
+	@include media-laptop {
+		padding: 60px 8px;	
+	}
+	
+	// @include media-mobile {
+	// 	padding: 60px 8px;
+	// }
 }
 
 .slider__wrapper {

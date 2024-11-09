@@ -4,6 +4,11 @@
 	padding: 12px 82px;
 	display: flex;
 	justify-content: space-between;
+	
+
+	@include media-tablet {
+		padding: 12px 8px;
+	}
 }
 
 .logo {

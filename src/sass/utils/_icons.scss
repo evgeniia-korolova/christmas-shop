@@ -24,14 +24,15 @@
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
-	background: transparent;
-	border: none;
+	background: $primary;
+	border: 1px solid $static-white;
+	border-radius: 20px;
 	stroke: $static-white;
-	fill: $primary;		
+			
 
 	&:hover {
 		stroke: $primary;
-		fill: $static-white;
+		background: $static-white;
 	}
 }
 
