@@ -3,6 +3,10 @@
 	gap: 12px;
 	margin-bottom: 60px;
 
+	@include media-tablet {
+		@include flex(column);				
+	}
+
 	.contact__card {
 		@include flex(column);	
 		gap: 11px;

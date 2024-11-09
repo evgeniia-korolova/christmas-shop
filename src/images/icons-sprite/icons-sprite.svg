@@ -1,22 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" overflow="hidden" style="position:absolute;width:0;height:0">
-  <defs>
-    <path id="reuse-0" stroke="var(--color4, #c1b6ad)" stroke-width=".533" d="M16 .267C24.689.267 31.733 7.311 31.733 16S24.689 31.733 16 31.733.267 24.689.267 16 7.311.267 16 .267z"/>
-  </defs>
-  <defs>
+<svg xmlns="http://www.w3.org/2000/svg">
+  
+  
+    <symbol id="arrow" width="24" height="24" viewBox="0 0 24 24">
+    <g>
+    <path fill="none" d="M6 12h12.5m0 0-6-6m6 6-6 6"  stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    </symbol> 
 
-    <symbol id="arrow-right" viewBox="0 0 32 32">
-    <use xlink:href="#reuse-0" stroke-width=".533"/>
-      
-      <path d="M6 12H18.5M18.5 12L12.5 6M18.5 12L12.5 18" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-  </symbol>
-    
-    
-   
-   
-    
-    
-   
-    
-
-  </defs>
-</svg>
+  
+</svg> 

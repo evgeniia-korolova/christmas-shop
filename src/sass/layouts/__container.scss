@@ -38,11 +38,8 @@
 	
 	@include media-laptop {
 		padding: 60px 8px;	
-	}
+	}	
 	
-	// @include media-mobile {
-	// 	padding: 60px 8px;
-	// }
 }
 
 .slider__wrapper {
@@ -56,16 +53,32 @@
 	padding: 60px 82px;
 	@include flex(column);	
 	align-items: center;
+
+	@include media-laptop {
+		padding: 60px 8px;	
+	}
 }
 
 .cta__wrapper {
-	background: url('../images/bg-forest.png') 0 0/100% 100%,
+	background: url('../images/bg-forest.png'),
 		url(../images/snow.png) center, $primary;	
 	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size: 100% 100%;
 	padding: 60px 82px;	
+
+	@include media-tablet {
+		background-size: cover;
+		background-position: center;
+		padding: 60px 8px;				
+	}
 }
 
 .footer__container {
 	padding: 60px 82px;
 	background: $static-white;
+
+	@include media-tablet {		
+		padding: 60px 8px;				
+	}
 }

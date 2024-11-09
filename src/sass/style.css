@@ -154,16 +154,35 @@ p {
   flex-direction: column;
   align-items: center;
 }
+@media (max-width: 1024px) {
+  .gifts-wrapper {
+    padding: 60px 8px;
+  }
+}
 
 .cta__wrapper {
-  background: url("../images/bg-forest.png") 0 0/100% 100%, url(../images/snow.png) center, #ff4646;
+  background: url("../images/bg-forest.png"), url(../images/snow.png) center, #ff4646;
   background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 100% 100%;
   padding: 60px 82px;
+}
+@media (max-width: 768px) {
+  .cta__wrapper {
+    background-size: cover;
+    background-position: center;
+    padding: 60px 8px;
+  }
 }
 
 .footer__container {
   padding: 60px 82px;
   background: #fff;
+}
+@media (max-width: 768px) {
+  .footer__container {
+    padding: 60px 8px;
+  }
 }
 
 .header {
@@ -357,6 +376,11 @@ p {
 .slider__text:first-child {
   margin-left: 84px;
 }
+@media (max-width: 768px) {
+  .slider__text:first-child {
+    margin-left: 8px;
+  }
+}
 
 .slider__image {
   border-radius: 20px;
@@ -382,6 +406,11 @@ p {
   margin-top: 1.8rem;
   justify-content: center;
 }
+@media (max-width: 610px) {
+  .gifts__cards {
+    padding: 0 27px;
+  }
+}
 
 .gift__card {
   display: flex;
@@ -389,6 +418,12 @@ p {
   background: #ecf3f8;
   border-radius: 2rem;
   flex-basis: calc((100% - 36px) / 4);
+  height: 342px;
+}
+@media (max-width: 610px) {
+  .gift__card {
+    flex-basis: 100%;
+  }
 }
 .gift__card .gift__content {
   border-radius: 2rem;
@@ -428,6 +463,11 @@ p {
 
 .caption-gifts {
   margin-bottom: 12px;
+}
+@media (max-width: 1024px) {
+  .caption-gifts {
+    margin-bottom: 12px;
+  }
 }
 
 .cta__content {
@@ -476,6 +516,12 @@ p {
   display: flex;
   gap: 12px;
   margin-bottom: 60px;
+}
+@media (max-width: 768px) {
+  .contact__cards {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .contact__cards .contact__card {
   display: flex;
@@ -573,10 +619,11 @@ p {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  background: #ff4646;
+  background: transparent;
   border: 1px solid #fff;
   border-radius: 20px;
   stroke: #fff;
+  fill: transparent;
 }
 .arrow:hover {
   stroke: #ff4646;

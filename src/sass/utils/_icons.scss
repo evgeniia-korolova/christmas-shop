@@ -24,10 +24,11 @@
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
-	background: $primary;
+	background: transparent;
 	border: 1px solid $static-white;
 	border-radius: 20px;
 	stroke: $static-white;
+	fill: transparent;
 			
 
 	&:hover {
@@ -39,3 +40,26 @@
 .arrow-left {
 	transform: rotate(180deg);
 }
+
+// .test-arrow {
+// 	width: 56px;
+// 	height: 56px;
+// 	@extend %transition;
+// 	display: flex;
+// 	align-items: center;
+// 	justify-content: center;
+// 	cursor: pointer;
+// 	background: transparent;
+// 	border: 1px solid $static-white;
+// 	border-radius: 20px;
+
+// 	.icon {
+// 		fill: none;
+// 		stroke: $static-white;
+// 	}
+// 	.icon:hover {
+// 		stroke: $primary;
+// 		fill: $static-white;
+// 	}
+// }
+

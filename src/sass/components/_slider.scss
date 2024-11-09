@@ -22,6 +22,10 @@
 
 .slider__text:first-child {
 	margin-left: 84px;
+
+	@include media-tablet {
+		margin-left: 8px;
+	}
 }
 
 .slider__image {

@@ -4,6 +4,10 @@
 	gap: 12px;
 	margin-top: 1.8rem;
 	justify-content: center;
+	
+	@include media-big-mobile {
+		padding: 0 27px;	
+	}
 }
 
 .gift__card {
@@ -11,6 +15,13 @@
 	background: $content-background;
 	border-radius: 2rem;
 	flex-basis: calc((100% - 36px) / 4);
+	height: 342px;
+
+	
+	@include media-big-mobile {
+		flex-basis: 100%;				
+	}
+
 
 	.gift__content {
 		border-radius: 2rem;
@@ -48,4 +59,8 @@
 
 .caption-gifts {
 	margin-bottom: 12px;
+
+	@include media-laptop {
+		margin-bottom: 12px;	
+	}
 }
