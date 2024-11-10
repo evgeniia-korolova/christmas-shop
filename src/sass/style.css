@@ -1,4 +1,4 @@
-.arrow, .dark__button, .nav__item a, .logo {
+.arrow, .icon, .dark__button, .nav__item a, .logo {
   transition: all 0.5s ease-out;
 }
 
@@ -466,7 +466,7 @@ p {
 }
 @media (max-width: 1024px) {
   .caption-gifts {
-    margin-bottom: 12px;
+    margin-bottom: 11px;
   }
 }
 
@@ -521,6 +521,8 @@ p {
   .contact__cards {
     display: flex;
     flex-direction: column;
+    margin-bottom: 0;
+    gap: 13px;
   }
 }
 .contact__cards .contact__card {
@@ -554,16 +556,17 @@ p {
 .socials {
   display: flex;
   flex-direction: column;
-  align-self: center;
   gap: 12px;
+}
+@media (max-width: 768px) {
+  .socials {
+    padding: 60px 0;
+  }
 }
 .socials__icons {
   display: flex;
   justify-content: center;
   gap: 12px;
-}
-.socials__icons a {
-  padding: 8px;
 }
 .socials .copy-rights {
   text-align: center;
@@ -592,24 +595,20 @@ p {
 }
 
 .icon {
+  padding: 8px;
   width: 40px;
   height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  stroke: #181c29;
 }
-
-.icon-telegram {
-  background: url("../images/telegram.svg") no-repeat center;
-}
-
-.icon-facebook {
-  background: url("../images/facebook.svg") no-repeat center;
-}
-
-.icon-instagram {
-  background: url("../images/instagram.svg") no-repeat center;
-}
-
-.icon-x {
-  background: url("../images/x.svg") no-repeat center;
+.icon:hover {
+  stroke: #ff4646;
+  background: rgba(6, 164, 79, 0.1);
+  border-radius: 4px;
+  border: 1px dashed #06a44f;
 }
 
 .arrow {

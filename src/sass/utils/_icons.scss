@@ -1,20 +1,28 @@
 .icon {
+	padding: 8px;
 	width: 40px;
 	height: 40px;
+	@extend %transition;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;	
+	stroke: $dark;
+	// fill: $static-white;
+	
+
+	&:hover {
+		stroke: $primary;
+		background: rgba(6, 164, 79, 0.1);
+		border-radius: 4px;
+		border: 1px dashed $tag-green;
+	}
+	// .icon-social {
+	// 	stroke: $dark;
+	// 	fill: $static-white;
+	// }
 }
 
-.icon-telegram {
-	background: url('../images/telegram.svg') no-repeat center;
-}
-.icon-facebook {
-	background: url('../images/facebook.svg') no-repeat center;
-}
-.icon-instagram {
-	background: url('../images/instagram.svg') no-repeat center;
-}
-.icon-x {
-	background: url('../images/x.svg') no-repeat center;
-}
 
 .arrow {
 	width: 56px;

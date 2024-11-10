@@ -4,7 +4,9 @@
 	margin-bottom: 60px;
 
 	@include media-tablet {
-		@include flex(column);				
+		@include flex(column);
+		margin-bottom: 0;
+		gap: 13px;				
 	}
 
 	.contact__card {
@@ -37,17 +39,21 @@
 
 .socials {
 	@include flex(column);	
-	align-self: center;
+	// align-self: center;
     gap: 12px;
+
+	@include media-tablet {
+		padding: 60px 0;						
+	}
+
+
 	
 	&__icons {
 		display: flex;
 		justify-content: center;
         gap: 12px;
 
-		a {
-			padding: 8px;			
-		}
+		
 	}
     .copy-rights {       
         text-align: center;        
