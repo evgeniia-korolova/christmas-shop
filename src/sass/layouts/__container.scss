@@ -47,6 +47,10 @@
 	@include flex(column);	
 	align-items: center;
 	gap: 20px;
+
+	@include media-laptop {
+		padding: 60px 8px;	
+	}
 }
 
 .gifts-wrapper {

@@ -3,14 +3,20 @@
 }
 
 .slider__window {
-	overflow-x: hidden;
+	overflow: hidden;
 	width: 100%;
 }
 
 .slider__line {
-	display: flex;
+	display: inline-flex;
 	align-items: center;
 	gap: 20px;
+	@extend %transition;
+	margin-left: 84px;
+
+	@include media-tablet {
+		margin-left: 0;
+	}
 }
 
 .slider__text {
@@ -20,13 +26,13 @@
 	color: $static-white;
 }
 
-.slider__text:first-child {
-	margin-left: 84px;
+// .slider__text:first-child {
+// 	margin-left: 84px;
 
-	@include media-tablet {
-		margin-left: 8px;
-	}
-}
+// 	@include media-tablet {
+// 		margin-left: 0;
+// 	}
+// }
 
 .slider__image {
 	border-radius: 20px;

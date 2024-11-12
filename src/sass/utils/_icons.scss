@@ -16,11 +16,7 @@
 		background: rgba(6, 164, 79, 0.1);
 		border-radius: 4px;
 		border: 1px dashed $tag-green;
-	}
-	// .icon-social {
-	// 	stroke: $dark;
-	// 	fill: $static-white;
-	// }
+	}	
 }
 
 
@@ -32,21 +28,32 @@
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
+	border: none;
+	outline: none;
 	background: transparent;
 	border: 1px solid $static-white;
 	border-radius: 20px;
 	stroke: $static-white;
 	fill: transparent;
+	border-radius: 20px;
 			
-
-	&:hover {
-		stroke: $primary;
-		background: $static-white;
-	}
+ @media(hover: hover) {
+	 &:hover {
+		 stroke: $primary;
+		 background: $static-white;
+	 }
+ }
 }
 
 .arrow-left {
 	transform: rotate(180deg);
+}
+
+.btn-disabled {
+	opacity: 0.5;
+	pointer-events: none;
+	fill: transparent;
+	stroke: $static-white;
 }
 
 
