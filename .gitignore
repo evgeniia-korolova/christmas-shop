@@ -1,4 +1,5 @@
+.*
 node-modules
-.vscode
-.slider1.js
-.slider2.js
+vscode
+slider1.js
+slider2.js
