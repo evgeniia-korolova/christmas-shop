@@ -24,6 +24,10 @@ a {
 	text-decoration: none;
 }
 
+ul, li {
+	list-style: none
+}
+
 h1 {
 	@include font(3.2rem, 1.5, 0.18em, 600);
 	text-transform: uppercase;
@@ -59,4 +63,8 @@ p {
 	font-family: $second-family;	
 	text-align: center;
 	color: $static-white;	
+}
+
+.no-scroll {
+  overflow: hidden;
 }

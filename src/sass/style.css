@@ -1,13 +1,5 @@
-.arrow, .icon, .dark__button, .slider__line, .nav__item a, .logo {
+.arrow, .icon, .dark__button, .slider__line, .hamburger__line, .nav__item a, .navigation, .logo {
   transition: all 0.5s ease-out;
-}
-
-.hamburger__line:nth-child(2), .hamburger__line:nth-child(1) {
-  width: 20px;
-  height: 1px;
-  background: #181c29;
-  border-radius: 5px;
-  position: absolute;
 }
 
 html {
@@ -34,6 +26,10 @@ main {
 
 a {
   text-decoration: none;
+}
+
+ul, li {
+  list-style: none;
 }
 
 h1 {
@@ -89,6 +85,10 @@ p {
   font-family: "Allura", cursive;
   text-align: center;
   color: #fff;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .wrapper {
@@ -228,15 +228,39 @@ p {
   color: var(--dark);
 }
 
-.nav__list {
-  list-style: none;
+@media (max-width: 768px) {
+  .navigation {
+    position: fixed;
+    top: 64px;
+    right: -100%;
+    width: 100%;
+    height: calc(100% - 64px);
+    z-index: 10;
+  }
+}
+.navigation .nav__list {
   display: flex;
   gap: 8px;
 }
 @media (max-width: 768px) {
-  .nav__list {
-    display: none;
+  .navigation .nav__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 348px;
   }
+}
+@media (max-width: 610px) {
+  .navigation .nav__list {
+    padding-top: 242px;
+  }
+}
+.navigation.is-open {
+  visibility: visible;
+  opacity: 1;
+  right: 0;
+  background: #fff;
 }
 
 .nav__item a {
@@ -249,13 +273,21 @@ p {
   color: #181c29;
   padding: 12px 20px;
 }
+@media (max-width: 768px) {
+  .nav__item a {
+    font-size: 2.4rem;
+    line-height: 1.52;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+  }
+}
 .nav__item a:hover {
   color: #ff4646;
   border-radius: 24px;
   background: rgba(255, 70, 70, 0.1);
 }
 
-.hamburger {
+.hamburger-open {
   display: none;
   width: 40px;
   height: 40px;
@@ -264,9 +296,17 @@ p {
   position: relative;
 }
 @media (max-width: 768px) {
-  .hamburger {
+  .hamburger-open {
     display: flex;
   }
+}
+
+.hamburger__line {
+  width: 20px;
+  height: 1px;
+  background: #181c29;
+  border-radius: 5px;
+  position: absolute;
 }
 
 .hamburger__line:nth-child(1) {
@@ -275,6 +315,14 @@ p {
 
 .hamburger__line:nth-child(2) {
   transform: translateY(4px);
+}
+
+.navigation.is-open ~ .hamburger-open .hamburger__line:nth-child(1) {
+  transform: translateY(0) rotate(45deg);
+}
+
+.navigation.is-open ~ .hamburger-open .hamburger__line:nth-child(2) {
+  transform: translateY(0) rotate(-45deg);
 }
 
 .hero__content {
