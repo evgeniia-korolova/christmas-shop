@@ -1,9 +1,9 @@
 .contact__cards {
-	display: flex;
+	display: flex;	
 	gap: 12px;
 	margin-bottom: 60px;
 
-	@include media-tablet {
+	@include media-laptop {
 		@include flex(column);
 		margin-bottom: 0;
 		gap: 13px;				
@@ -13,10 +13,10 @@
 		@include flex(column);	
 		gap: 11px;
 		align-items: center;		
-		flex-basis: calc((100% - 24px) / 3);
+		flex-basis: calc((100% - 24px) / 3);		
 		background: $content-background;
 		border-radius: 20px;
-		padding: 20px 0;
+		padding: 20px 0;		
 
 		a,
 		h3 {

@@ -10,7 +10,7 @@ export default function handleSlider() {
 	const totalWidth = 1990;
 
 	const maxOffset = totalWidth - visibleWidth;
-	const stepsCount = window.innerWidth >= 1440 ? 3 : 6;
+	const stepsCount = window.innerWidth >= 768 ? 3 : 6;
 	const stepWidth = maxOffset / stepsCount;
 	let count = 0;
 	let currentOffset = 0;

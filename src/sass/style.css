@@ -1,4 +1,4 @@
-.arrow, .icon, .dark__button, .slider__line, .hamburger__line, .nav__item a, .navigation, .logo {
+.arrow, .icon, .dark__button, .slider__line, .hamburger__line, .nav__item a, .navigation.is-open, .navigation, .logo {
   transition: all 0.5s ease-out;
 }
 
@@ -234,7 +234,7 @@ p {
     top: 64px;
     right: -100%;
     width: 100%;
-    height: calc(100% - 64px);
+    height: 100%;
     z-index: 10;
   }
 }
@@ -567,7 +567,7 @@ p {
   gap: 12px;
   margin-bottom: 60px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .contact__cards {
     display: flex;
     flex-direction: column;

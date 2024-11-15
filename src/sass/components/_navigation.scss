@@ -6,8 +6,9 @@
 		top: 64px;
 		right: -100%;
 		width: 100%;
-		height: calc(100% - 64px);
-		z-index: 10;		
+		height: 100%;
+		z-index: 10;
+		@extend %transition;		
 	}
 
 	.nav__list {
@@ -31,6 +32,7 @@
 		opacity: 1;
 		right: 0;
 		background: $static-white;
+		@extend %transition;
 	}
 }
 

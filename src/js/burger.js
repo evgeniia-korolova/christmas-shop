@@ -11,8 +11,10 @@ export default function toggleBurger() {
 
     navLinks.forEach((element) => {
 			element.addEventListener('click', function () {
-				menu.classList.remove('is-open');
-				document.body.classList.toggle('no-scroll');
+                if(menu.classList.contains('is-open')){
+                    menu.classList.remove('is-open');
+                    document.body.classList.toggle('no-scroll');
+                }
 			});
 		});
 }
