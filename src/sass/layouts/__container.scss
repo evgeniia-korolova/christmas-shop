@@ -86,3 +86,11 @@
 		padding: 60px 8px;				
 	}
 }
+
+.gift-page__container {
+	background: url('../images/bg-garland.png'), $primary;
+	background-repeat: no-repeat;
+	padding: 60px 82px;
+	 @include flex(column);
+	 gap: 20px;
+}

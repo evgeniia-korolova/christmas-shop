@@ -1,4 +1,4 @@
-.arrow, .icon, .dark__button, .slider__line, .hamburger__line, .nav__item a, .navigation.is-open, .navigation, .logo {
+.tabs__button, .arrow, .icon, .dark__button, .slider__line, .hamburger__line, .nav__item a, .navigation.is-open, .navigation, .logo {
   transition: all 0.5s ease-out;
 }
 
@@ -188,6 +188,15 @@ p {
   .footer__container {
     padding: 60px 8px;
   }
+}
+
+.gift-page__container {
+  background: url("../images/bg-garland.png"), #ff4646;
+  background-repeat: no-repeat;
+  padding: 60px 82px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .header {
@@ -520,6 +529,13 @@ p {
   }
 }
 
+.gift-cards__wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
 .cta__content {
   max-width: 426px;
   display: flex;
@@ -625,6 +641,12 @@ p {
   color: #181c29;
 }
 
+.gifts-page__title {
+  max-width: 426px;
+  margin: 0 auto;
+  gap: 8px;
+}
+
 .dark__button {
   font-size: 1.2rem;
   line-height: 1.3;
@@ -693,4 +715,27 @@ p {
   pointer-events: none;
   fill: transparent;
   stroke: #fff;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+}
+
+.tabs__button {
+  padding: 12px 20px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  line-height: 1.3;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  border: 1px solid transparent;
+  background: transparent;
+  cursor: pointer;
+}
+.tabs__button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }/*# sourceMappingURL=style.css.map */

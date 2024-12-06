@@ -1,77 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./src/sass/style.css" />
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./src/sass/style.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Allura&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
 			rel="stylesheet"
 		/>
-</head>
-<body>
-    <section class="slider">
-					<div >
-						<div>
-							<div class="caption caption-slider">Become Happier!</div>
-							<h2>in the new 2025</h2>
-						</div>
-						<div class="window">
-							<div class="slider__line">
-								<div class="slider__text">live</div>
-
-								<img
-									class="slider__image"
-									src="./src/images/snowman.jpg"
-									alt="snowman"
-								/>
-
-								<div class="slider__text">create</div>
-
-								<img
-									class="slider__image"
-									src="./src/images/christmas-trees.jpg"
-									alt="christmas-trees"
-								/>
-
-								<div class="slider__text">love</div>
-
-								<img
-									class="slider__image"
-									src="./src/images/christmas-tree-ball.jpg"
-									alt="christmas-trees"
-								/>
-								<div class="slider__text">dream</div>
-
-								<img
-									class="slider__image"
-									src="./src/images/fairytale-house.jpg"
-									alt="christmas-trees"
-								/>
-							</div>
-						</div>
-						<div class="slider__controlls">
-							<button class="arrow arrow-left" id="arrow">
-								<svg class="icon-arrow" width="24" height="24">
-									<use
-										href="./src/images/icons-sprite/icons-sprite.svg#arrow"
-									></use>
-								</svg>
-								
-							</и>
-							<button class="arrow arrow-right" id="arrow-right">
-								<svg class="icon-arrow" width="24" height="24">
-									<use
-										href="./src/images/icons-sprite/icons-sprite.svg#arrow"
-									></use>
-								</svg>
-
-							</button>							
-						</div>
+	</head>
+	<body>
+		<header class="header">
+			<a href="#" class="logo">
+				<img
+					src="./src/images/snowflake.svg"
+					alt="snowflake"
+					class="logo__img"
+				/>
+				<div class="logo__text">The Gifts</div>
+			</a>
+			<nav class="navigation">
+				<ul class="nav__list">
+					<li class="nav__item">
+						<a class="nav__link" href="./gifts.html">gifts</a>
+					</li>
+					<li class="nav__item">
+						<a class="nav__link" href="#about">about</a>
+					</li>
+					<li class="nav__item">
+						<a class="nav__link" href="#gifts">best</a>
+					</li>
+					<li class="nav__item">
+						<a class="nav__link" href="#contacts">contacts</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="hamburger-open">
+				<span class="hamburger__line"></span>
+				<span class="hamburger__line"></span>
+			</div>
+		</header>
+		<main>
+			<section class="gifts-page">
+				<div class="container gift-page__container">
+					<h1 class="gifts-page__title">Achieve health, harmony, and inner strength</h1>
+					<div class="tabs">
+						<button class="tabs__button">All</button>
+						<div class="tabs__button">for work</div>
+						<div class="tabs__button">for health</div>
+						<div class="tabs__button">for harmony</div>
 					</div>
-				</section>
-</body>
+					<div class="gift-cards__wrapper">
+
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer id="contacts">
+			<div class="container footer__container">
+				<div class="contact__cards">
+					<div class="contact__card">
+						<img src="./src/images/santa-claus.png" alt="santa-claus" />
+						<a href="tel:+375291112233" class="contact__details"
+							>+375 (29) 111-22-33
+						</a>
+						<h3>Call Us</h3>
+					</div>
+					<div class="contact__card">
+						<img src="./src/images/christmas-tree.png" alt="christmas-tree" />
+						<a href="#" class="contact__details">Magic forest</a>
+						<h3>meet us</h3>
+					</div>
+					<div class="contact__card">
+						<img src="./src/images/snake.png" alt="santa-claus" />
+						<a href="mailto:gifts@magic.com" class="contact__details"
+							>gifts@magic.com</a
+						>
+						<h3>write us</h3>
+					</div>
+				</div>
+				<div class="socials">
+					<div class="socials__icons">
+						<a href="#" class="icon">
+							<svg class="icon-social" width="24" height="24">
+								<use
+									href="./src/images/icons-sprite/icons-sprite.svg#telegram"
+								></use>
+							</svg>
+						</a>
+						<a href="#" class="icon">
+							<svg class="icon-social" width="24" height="24">
+								<use
+									href="./src/images/icons-sprite/icons-sprite.svg#facebook"
+								></use>
+							</svg>
+						</a>
+						<a href="#" class="icon">
+							<svg class="icon-social" width="24" height="24">
+								<use
+									href="./src/images/icons-sprite/icons-sprite.svg#insta"
+								></use>
+							</svg>
+						</a>
+						<a href="#" class="icon">
+							<svg class="icon-social" width="24" height="24">
+								<use href="./src/images/icons-sprite/icons-sprite.svg#x"></use>
+							</svg>
+						</a>
+					</div>
+					<p class="copy-rights">© Copyright 2025, All Rights Reserved</p>
+					<a
+						href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/christmas-shop/christmas-shop.md"
+						class="caption"
+						>Made in Rolling Scopes School</a
+					>
+				</div>
+			</div>
+		</footer>
+		<script type="module" src="./src/js/gift-cards.js"></script>
+	</body>
 </html>
