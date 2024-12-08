@@ -1,6 +1,9 @@
 import  {gifts}  from "./gifts.js";
 
-console.log('gifts', gifts);
+
+const DEFAULT_CATEGORY = 'all';
+const TABS = document.querySelector('.tabs');
+
 
 function shuffleArray(array) {
 	for (let i = array.length - 1; i > 0; i--) {
@@ -29,7 +32,9 @@ class GiftCard {
                 <img src="${this.src}" alt="${this.alt}" />
             </div>
             <div class="gift__content">
-                <h4 class="gift-${this.category.toLowerCase()}">${this.category}</h4>
+                <h4 class="gift-${this.category
+									.toLowerCase()
+									.replace(/ /g, '-')}">${this.category}</h4>
                 <h3 class="gift__text">${this.name}</h3>
             </div>
         `;
@@ -37,17 +42,58 @@ class GiftCard {
     }
 }
 
-shuffledGifts.forEach((gift) => {
-	
-	const giftCard = new GiftCard(
-		gift.img,
-		gift.name,
-		gift.category,
-		gift.name,
-		'.gift-cards__wrapper'
-	);
-	
-	giftCard.renderGiftCard();
-});
+function initializeMenu() {
+    shuffledGifts.forEach((gift) => {
+			const giftCard = new GiftCard(
+				gift.img,
+				gift.name,
+				gift.category,
+				gift.name,
+				'.gift-cards__wrapper'
+			);
+
+			giftCard.renderGiftCard();
+            TABS.children[0].classList.add('tab__active');
+		});
+
+}
+
+initializeMenu()
+
+function getGiftsByCategory(category) {
+    const filteredGifts = shuffledGifts.filter(gift => gift.category === category);
+    return filteredGifts;
+}
+
+function tabsHandler(e) {
+    const target = e.target;
+    const category = target.textContent;
+    console.log('category', category);
+    document.querySelector('.gift-cards__wrapper').innerHTML = '';
+    const activeTab = TABS.querySelector('.tab__active');
+    activeTab.classList.remove('tab__active');
+    target.classList.add('tab__active');
+    if (category === DEFAULT_CATEGORY) {
+        initializeMenu();
+    } else {
+        const filteredGifts = getGiftsByCategory(category);
+        console.log(filteredGifts)
+        filteredGifts.forEach((gift) => {
+            const giftCard = new GiftCard(
+                gift.img,
+                gift.name,
+                gift.category,
+                gift.name,
+                '.gift-cards__wrapper'
+            );
+
+            giftCard.renderGiftCard();
+        });
+    }
+}
+
+TABS.addEventListener('click', tabsHandler);
+
+
 
 

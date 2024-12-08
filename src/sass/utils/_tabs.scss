@@ -20,3 +20,9 @@
     }
 }
 
+.tab__active {
+    background: $static-white-20;
+        border-radius: 12px;
+        border: 1px solid  $static-white-20;
+}
+

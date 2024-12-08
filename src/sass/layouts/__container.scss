@@ -87,9 +87,12 @@
 	}
 }
 
+
 .gift-page__container {
 	background: url('../images/bg-garland.png'), $primary;
 	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: 100%;
 	padding: 60px 82px;
 	 @include flex(column);
 	 gap: 20px;
