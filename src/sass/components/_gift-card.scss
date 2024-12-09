@@ -1,0 +1,104 @@
+.gift__card {
+	@include flex(column);
+	background: $content-background;
+	border-radius: 2rem;
+	width: 310px;
+	max-height: 342px;
+
+	@include media-big-mobile {
+		flex-basis: 100%;
+	}
+
+    &.modal {
+        flex-basis: 100%;
+        height: auto;
+    }
+
+	.gift__content--container {
+		@include flex(column);
+		border-radius: 2rem;
+		padding: 19px 20px;
+		background: $static-white;
+		flex-grow: 1;
+		gap: 20px;
+	}
+
+	.gift__content {
+		@include flex(column);
+		gap: 8px;
+	}
+
+	.gift__text {
+		@include font(1.6rem, 1.48, 0.08em, 600, normal);
+		color: $dark;
+		text-transform: uppercase;
+		text-align: left;
+	}
+
+	.gift__description {
+		@include font(1.6rem, 1.48, 0em, 400, normal);
+	}
+}
+
+.gift__img {
+	border-radius: 20px 20px 0 0;
+
+	img {
+		border-radius: 20px 20px 0 0;
+		width: 100%;
+		object-fit: cover;
+	}
+}
+
+.gift__img--img {
+    height: 23rem;
+    object-fit: contain;
+}
+
+.gift-for-work {
+	color: $tag-purple;
+}
+.gift-for-health {
+	color: $tag-green;
+}
+.gift-for-harmony {
+	color: $tag-pink;
+}
+
+.gift__superpowers {
+	@include flex(column);
+	gap: 8px;
+}
+
+.superpowers__container {
+	display: flex;
+	flex-direction: column;
+}
+
+.superpowers__item {
+	display: flex;
+	align-items: center;	
+    @include font(1.6rem, 1.48, 0em, 400, normal);
+}
+
+.superpowers__item--title {
+    flex-basis: 50%;
+	text-transform: capitalize;
+}
+
+.superpowers__rating {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+	margin-left: 15px;
+}
+
+.rating__snowflakes {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.icon-rating {
+	opacity: 0.3;
+}

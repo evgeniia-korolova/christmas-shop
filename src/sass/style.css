@@ -473,55 +473,6 @@ p {
   }
 }
 
-.gift__card {
-  display: flex;
-  flex-direction: column;
-  background: #ecf3f8;
-  border-radius: 2rem;
-  flex-basis: calc((100% - 36px) / 4);
-  height: 342px;
-}
-@media (max-width: 610px) {
-  .gift__card {
-    flex-basis: 100%;
-  }
-}
-.gift__card .gift__content {
-  border-radius: 2rem;
-  padding: 19px 20px;
-  background: #fff;
-  flex-grow: 1;
-}
-.gift__card .gift__text {
-  font-size: 1.6rem;
-  line-height: 1.48;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  color: #181c29;
-  text-transform: uppercase;
-  text-align: left;
-  margin-top: 8px;
-}
-
-.gift__img {
-  border-radius: 20px 20px 0 0;
-}
-.gift__img img {
-  border-radius: 20px 20px 0 0;
-}
-
-.gift-for-work {
-  color: #4361ff;
-}
-
-.gift-for-health {
-  color: #06a44f;
-}
-
-.gift-for-harmony {
-  color: #ff43f7;
-}
-
 .caption-gifts {
   margin-bottom: 12px;
 }
@@ -643,10 +594,163 @@ p {
   color: #181c29;
 }
 
+.gift__card {
+  display: flex;
+  flex-direction: column;
+  background: #ecf3f8;
+  border-radius: 2rem;
+  width: 310px;
+  max-height: 342px;
+}
+@media (max-width: 610px) {
+  .gift__card {
+    flex-basis: 100%;
+  }
+}
+.gift__card.modal {
+  flex-basis: 100%;
+  height: auto;
+}
+.gift__card .gift__content--container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 2rem;
+  padding: 19px 20px;
+  background: #fff;
+  flex-grow: 1;
+  gap: 20px;
+}
+.gift__card .gift__content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.gift__card .gift__text {
+  font-size: 1.6rem;
+  line-height: 1.48;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #181c29;
+  text-transform: uppercase;
+  text-align: left;
+}
+.gift__card .gift__description {
+  font-size: 1.6rem;
+  line-height: 1.48;
+  font-weight: 400;
+  letter-spacing: 0em;
+}
+
+.gift__img {
+  border-radius: 20px 20px 0 0;
+}
+.gift__img img {
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.gift__img--img {
+  height: 23rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.gift-for-work {
+  color: #4361ff;
+}
+
+.gift-for-health {
+  color: #06a44f;
+}
+
+.gift-for-harmony {
+  color: #ff43f7;
+}
+
+.gift__superpowers {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.superpowers__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.superpowers__item {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  line-height: 1.48;
+  font-weight: 400;
+  letter-spacing: 0em;
+}
+
+.superpowers__item--title {
+  flex-basis: 50%;
+  text-transform: capitalize;
+}
+
+.superpowers__rating {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: 15px;
+}
+
+.rating__snowflakes {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon-rating {
+  opacity: 0.3;
+}
+
 .gifts-page__title {
   max-width: 426px;
   margin: 0 auto;
   gap: 8px;
+}
+
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: visible;
+  opacity: 1;
+  transition: 1s;
+}
+
+.modal {
+  width: 400px;
+  display: flex;
+  border-radius: 20px;
+  color: #181c29;
+  margin-top: 55px;
+}
+.modal__card {
+  height: auto;
+}
+.modal__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.modal__hidden {
+  display: none;
 }
 
 .dark__button {

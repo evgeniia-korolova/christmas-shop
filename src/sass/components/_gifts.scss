@@ -10,52 +10,6 @@
 	}
 }
 
-.gift__card {
-	@include flex(column);
-	background: $content-background;
-	border-radius: 2rem;
-	flex-basis: calc((100% - 36px) / 4);
-	height: 342px;
-
-	
-	@include media-big-mobile {
-		flex-basis: 100%;				
-	}
-
-
-	.gift__content {
-		border-radius: 2rem;
-		padding: 19px 20px;		
-		background: $static-white;
-		flex-grow: 1;
-	}
-
-	.gift__text {
-		@include font(1.6rem, 1.48, 0.08em, 600, normal);
-		color: $dark;
-		text-transform: uppercase;
-		text-align: left;
-		margin-top: 8px;
-	}
-}
-
-.gift__img {
-	border-radius: 20px 20px 0 0;
-
-	img {
-		border-radius: 20px 20px 0 0;
-	}
-}
-
-.gift-for-work {
-	color: $tag-purple;
-}
-.gift-for-health {
-	color: $tag-green;
-}
-.gift-for-harmony {
-	color: $tag-pink;
-}
 
 .caption-gifts {
 	margin-bottom: 12px;
