@@ -10,6 +10,7 @@ const shuffledGifts = shuffleArray(gifts);
 export function initializeMenu() {
     shuffledGifts.forEach((gift) => {
 			const giftCard = new GiftCard(
+                gift.id,
 				gift.img,
 				gift.name,
 				gift.category,
@@ -45,6 +46,7 @@ function tabsHandler(e) {
         
         filteredGifts.forEach((gift) => {
             const giftCard = new GiftCard(
+                gift.id,
                 gift.img,
                 gift.name,
                 gift.category,

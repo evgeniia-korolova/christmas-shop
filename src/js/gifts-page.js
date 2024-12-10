@@ -1,5 +1,5 @@
 import { initializeMenu } from "./gift-cards.js";
-import { openModal } from "./modal.js";
+import { handleModal } from "./modal.js";
 
 initializeMenu();
-openModal()
+handleModal()

@@ -7,7 +7,8 @@ export function shuffleArray(array) {
 }
 
 export class GiftCard {
-	constructor(src, alt, category, name, parentSelector) {
+	constructor(id, src, alt, category, name, parentSelector) {
+		this.id = id;
 		this.src = src;
 		this.alt = alt;
 		this.category = category;
@@ -16,8 +17,9 @@ export class GiftCard {
 	}
 
 	renderGiftCard() {
-		const giftCard = document.createElement('div');
+		const giftCard = document.createElement('li');
 		giftCard.classList.add('gift__card');
+		giftCard.setAttribute('data-id', this.id);
 		giftCard.innerHTML = `
             <div class="gift__img">
                 <img src="${this.src}" alt="${this.alt}" />
@@ -35,6 +37,7 @@ export class GiftCard {
 
 export class GiftCardModal extends GiftCard {
 	constructor(
+		id,
 		src,
 		alt,
 		category,
@@ -43,7 +46,7 @@ export class GiftCardModal extends GiftCard {
 		superpowers,
 		parentSelector
 	) {
-		super(src, alt, category, name, parentSelector);
+		super(id, src, alt, category, name, parentSelector);
 		this.description = description; // Добавляем описание
 		this.superpowers = superpowers; // Добавляем суперспособности
 	}
@@ -53,28 +56,31 @@ export class GiftCardModal extends GiftCard {
 		giftCardModal.classList.add('modal');
 		giftCardModal.innerHTML = `
 			<div class="gift__card modal">
-					<div class="gift__img">
-						<img class="gift__img--img" src="${this.src}" alt="${this.alt}" />
-					</div>
-					<div class="gift__content--container">
-						<div class="gift__content">
-							<h4 class="gift-${this.category.toLowerCase().replace(/ /g, '-')}">${
+				<span class="modal__close">
+                        <img src="./src/images/modal-close.svg" alt="close">
+                </span>
+				<div class="gift__img">
+					<img class="gift__img--img" src="${this.src}" alt="${this.alt}" />
+				</div>
+				<div class="gift__content--container">
+					<div class="gift__content">
+						<h4 class="gift-${this.category.toLowerCase().replace(/ /g, '-')}">${
 			this.category
 		}
-							</h4>
-							<h3 class="gift__text">${this.name}</h3>
-							<p class="gift__description">
+						</h4>
+						<h3 class="gift__text">${this.name}</h3>
+						<p class="gift__description">
 								${this.description}
-							</p>
-						</div>
-						<div class="gift__superpowers superpowers">
-							<h4 class="superpowers__text">Adds superpowers to:</h4>
-							<div class="superpowers__container">						
+						</p>
+					</div>
+					<div class="gift__superpowers superpowers">
+						<h4 class="superpowers__text">Adds superpowers to:</h4>
+						<div class="superpowers__container">					
 								${this.renderSuperpowers()}	
-							</div>
 						</div>
 					</div>
 				</div>
+			</div>
 		`;
 
 		this.parent.append(giftCardModal);
