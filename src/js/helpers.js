@@ -36,7 +36,7 @@ export class GiftCard {
 export class GiftCardModal extends GiftCard {
 	constructor(
 		src,
-		alt,		
+		alt,
 		category,
 		name,
 		description,
@@ -58,7 +58,9 @@ export class GiftCardModal extends GiftCard {
 					</div>
 					<div class="gift__content--container">
 						<div class="gift__content">
-							<h4 class="gift-${this.category.toLowerCase().replace(/ /g, '-')}">${this.category}
+							<h4 class="gift-${this.category.toLowerCase().replace(/ /g, '-')}">${
+			this.category
+		}
 							</h4>
 							<h3 class="gift__text">${this.name}</h3>
 							<p class="gift__description">
@@ -80,22 +82,53 @@ export class GiftCardModal extends GiftCard {
 
 	renderSuperpowers() {
 		return Object.entries(this.superpowers)
-			.map(
-				([title, value]) => `
+			.map(([title, value]) => {
+				const snowflakes = this.generateSnowflakes(
+					parseInt(value.replace('+', ''))
+				); // Убираем "+" и преобразуем в число
+				return `
 				<div class="superpowers__item">
 					<div class="superpowers__item--title">${title}</div>
 					<div class="superpowers__rating">
 						<span>${value}</span>
 						<div class="rating__snowflakes">
-							<svg class="icon-rating" width="14" height="16">
-								<use href="./src/images/icons-sprite/icons-sprite.svg#rating-snowflake"></use>
-							</svg>
+							${snowflakes}
 						</div>
 					</div>
 				</div>
-			`
-			)
-			.join(''); // Объединяем массив строк в одну строку
+			`;
+			})
+			.join('');
+	}
+
+	generateSnowflakes(value) {
+		const fullSnowflakes = Math.floor(value / 100); // Полные снежинки
+		const totalSnowflakes = 5; // Общее количество снежинок
+		const snowflakesArray = [];
+
+		for (let i = 0; i < totalSnowflakes; i++) {
+			// Полные снежинки (opacity: 1)
+			if (i < fullSnowflakes) {
+				snowflakesArray.push(`
+				<svg  width="14" height="16" ">
+					<use href="./src/images/icons-sprite/icons-sprite.svg#rating-snowflake"></use>
+				</svg>
+			`);
+			}
+			// Полупрозрачные снежинки (opacity: 0.3)
+			else {
+				snowflakesArray.push(`
+				<svg class="icon-rating" width="14" height="16" >
+					<use href="./src/images/icons-sprite/icons-sprite.svg#rating-snowflake"></use>
+				</svg>
+			`);
+			}
+		}
+
+		return snowflakesArray.join('');
 	}
 }
+
+
+
 
