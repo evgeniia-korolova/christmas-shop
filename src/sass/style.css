@@ -1,4 +1,4 @@
-.tabs__button, .arrow, .icon, .dark__button, .slider__line, .hamburger__line, .nav__item a, .navigation.is-open, .navigation, .logo {
+.tabs__button, .arrow-up__btn, .arrow, .icon, .dark__button, .contact__cards .contact__card, .slider__line, .hamburger__line, .nav__item a, .navigation.is-open, .navigation, .logo, .caption {
   transition: all 0.5s ease-out;
 }
 
@@ -10,6 +10,7 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -199,6 +200,12 @@ p {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  position: relative;
+}
+@media (max-width: 1024px) {
+  .gift-page__container {
+    padding: 60px;
+  }
 }
 
 .header {
@@ -465,7 +472,8 @@ p {
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 1.8rem;
-  justify-content: center;
+  justify-content: space-between;
+  position: relative;
 }
 @media (max-width: 610px) {
   .gifts__cards {
@@ -487,6 +495,7 @@ p {
   justify-content: center;
   flex-wrap: wrap;
   gap: 12px;
+  width: 100%;
 }
 
 .cta__content {
@@ -557,6 +566,9 @@ p {
 .contact__cards .contact__card a,
 .contact__cards .contact__card h3 {
   color: #181c29;
+}
+.contact__cards .contact__card:hover a, .contact__cards .contact__card:hover h3 {
+  color: #ff4646;
 }
 .contact__cards .contact__card a {
   font-size: 2.4rem;
@@ -831,6 +843,39 @@ p {
 
 .arrow-left {
   transform: rotate(180deg);
+}
+
+.arrow-up__btn {
+  position: fixed;
+  bottom: 30%;
+  right: 30px;
+  transform: translateX(50%);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+  border: 2px solid #ff4646;
+}
+@media (max-width: 768px) {
+  .arrow-up__btn {
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.arrow-up__visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.arrow-up {
+  transform: rotate(270deg);
+  stroke: #181c29;
 }
 
 .btn-disabled {

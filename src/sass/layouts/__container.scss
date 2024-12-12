@@ -96,4 +96,9 @@
 	padding: 60px 82px;
 	 @include flex(column);
 	 gap: 20px;
+	 position: relative;
+
+	 @include media-laptop {		
+		padding: 60px;				
+	}
 }

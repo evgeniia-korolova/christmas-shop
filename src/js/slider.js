@@ -20,9 +20,7 @@ export default function handleSlider() {
 			currentOffset += stepWidth;
 			count++;
 			btnLeft.classList.remove('btn-disabled');
-			sliderLine.style.transform = `translateX(-${currentOffset}px)`;
-			console.log(`count : ${count}, stepsCount : ${stepsCount}`);
-			
+			sliderLine.style.transform = `translateX(-${currentOffset}px)`;			
 		} 
 		 if (count === stepsCount) {
 			btnRight.classList.add('btn-disabled');

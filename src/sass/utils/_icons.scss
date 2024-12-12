@@ -7,8 +7,7 @@
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;	
-	stroke: $dark;
-	// fill: $static-white;
+	stroke: $dark;	
 	
 
 	&:hover {
@@ -49,6 +48,38 @@
 	transform: rotate(180deg);
 }
 
+.arrow-up__btn {
+	position: fixed;
+	bottom: 30%;
+	right: 30px;
+	transform: translateX(50%);
+	display: none;
+	justify-content: center;
+	align-items: center;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background: $static-white;
+	@extend %transition;
+	cursor: pointer;
+	border: 2px solid $primary;
+
+	 @include media-tablet {		
+		display: flex;
+		opacity: 0;	
+		visibility: hidden;			
+	}
+}
+
+.arrow-up__visible {
+	opacity: 1;
+	visibility: visible;
+}
+
+.arrow-up {
+	transform: rotate(270deg);
+	stroke: $dark;
+}
 .btn-disabled {
 	opacity: 0.5;
 	pointer-events: none;

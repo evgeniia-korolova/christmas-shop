@@ -3,13 +3,13 @@
 	flex-wrap: wrap;
 	gap: 12px;
 	margin-top: 1.8rem;
-	justify-content: center;
+	justify-content: space-between;
+	position: relative;
 	
 	@include media-big-mobile {
 		padding: 0 27px;	
 	}
 }
-
 
 .caption-gifts {
 	margin-bottom: 12px;
@@ -24,4 +24,5 @@
 	justify-content: center;
 	flex-wrap: wrap;
 	gap: 12px;
+	width: 100%;
 }
