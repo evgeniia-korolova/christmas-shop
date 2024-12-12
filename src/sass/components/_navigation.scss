@@ -93,3 +93,9 @@
 .navigation.is-open ~ .hamburger-open .hamburger__line:nth-child(2) {
 	transform: translateY(0) rotate(-45deg);
 }
+
+.link-disabled {
+	pointer-events: none;
+	user-select: none;
+	opacity: 0.5;
+}

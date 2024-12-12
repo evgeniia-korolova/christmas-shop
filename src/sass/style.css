@@ -343,6 +343,14 @@ p {
   transform: translateY(0) rotate(-45deg);
 }
 
+.link-disabled {
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  opacity: 0.5;
+}
+
 .hero__content {
   padding: 60px 0;
   max-width: 430px;
