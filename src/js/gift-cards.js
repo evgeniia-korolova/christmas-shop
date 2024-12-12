@@ -3,34 +3,38 @@ import { shuffleArray, GiftCard } from "./helpers.js";
 
 const TABS = document.querySelector('.tabs');
 
-const shuffledGifts = shuffleArray(gifts);
+export const shuffledGifts = shuffleArray(gifts);
+export const randomCards = [...shuffledGifts].slice(0, 4);
 
 
 
-export function initializeMenu() {
-    shuffledGifts.forEach((gift) => {
+export function initializeMenu(array, parentSelector) {
+    array.forEach((gift) => {
 			const giftCard = new GiftCard(
                 gift.id,
 				gift.img,
 				gift.name,
 				gift.category,
 				gift.name,
-				'.gift-cards__wrapper'
+				parentSelector
 			);
 
-			giftCard.renderGiftCard();
-            TABS.children[0].classList.add('tab__active');
+			giftCard.renderGiftCard();            
 		});
-
 }
 
-// initializeMenu()
+export function initializeTabs() {
+    TABS.children[0].classList.add('tab__active');
+}
+
 
 function getGiftsByCategory(category) {
     const filteredGifts = shuffledGifts.filter(gift => gift.category === category);
     return filteredGifts;
 }
 
+
+export function handleCategories() {
 function tabsHandler(e) {
     const target = e.target;
     const category = target.textContent;  
@@ -40,7 +44,7 @@ function tabsHandler(e) {
     activeTab.classList.remove('tab__active');
     target.classList.add('tab__active');
     if (category === DEFAULT_CATEGORY) {
-        initializeMenu();
+        initializeMenu(shuffledGifts, '.gift-cards__wrapper');
     } else {
         const filteredGifts = getGiftsByCategory(category);
         
@@ -60,7 +64,7 @@ function tabsHandler(e) {
 }
 
 TABS.addEventListener('click', tabsHandler);
-
+}
 
 
 

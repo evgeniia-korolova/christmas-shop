@@ -1,10 +1,10 @@
 import { GiftCardModal } from "./helpers.js";
 import { gifts } from "./gifts.js";
 
-export function handleModal() {
+export function handleModal(parentSelector) {
 
 const overlay = document.querySelector('.modal__overlay');
-const menu = document.querySelector('.gift-cards__wrapper');
+const menu = document.querySelector(parentSelector);
 
 overlay.addEventListener('click', closeCardHandler);
 

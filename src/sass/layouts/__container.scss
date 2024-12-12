@@ -67,11 +67,11 @@
 	background: url('../images/bg-forest.png'),
 		url(../images/snow.png) center, $primary;	
 	background-repeat: no-repeat;
-	background-position: 0 0;
-	background-size: 100% 100%;
+	background-position: 0 0;	
+	background-size: contain;
 	padding: 60px 82px;	
 
-	@include media-tablet {
+	@include media-laptop {
 		background-size: cover;
 		background-position: center;
 		padding: 60px 8px;				

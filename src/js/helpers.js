@@ -22,7 +22,7 @@ export class GiftCard {
 		giftCard.setAttribute('data-id', this.id);
 		giftCard.innerHTML = `
             <div class="gift__img">
-                <img src="${this.src}" alt="${this.alt}" />
+                <img src="${this.src}" alt="${this.name}" />
             </div>
 			<div class="gift__content--container">
 				<div class="gift__content">
