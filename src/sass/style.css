@@ -472,7 +472,7 @@ p {
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 1.8rem;
-  justify-content: space-between;
+  justify-content: center;
   position: relative;
 }
 @media (max-width: 610px) {
