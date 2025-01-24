@@ -1,5 +1,5 @@
 export default function setTimer() {
-	const deadline = '2025-01-01T00:00:00';
+	const deadline = '2026-01-01T00:00:00';
 
 	function getTimeRemaining(endtime) {
 		const total = Date.parse(endtime) - Date.parse(new Date());
